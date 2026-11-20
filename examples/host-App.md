@@ -1,3 +1,8 @@
+# 포털 앱 예제
+
+기존 React + TypeScript 앱의 App.tsx에 복사해서 사용합니다.
+
+```tsx
 import { useRef } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { PortalHostSync } from "portal-route-sdk-demo";
@@ -37,3 +42,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+```

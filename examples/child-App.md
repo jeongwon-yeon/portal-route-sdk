@@ -1,3 +1,8 @@
+# 서비스 앱 예제
+
+기존 React + TypeScript 앱의 App.tsx에 복사해서 사용합니다.
+
+```tsx
 import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom";
 import { PortalRouteSync } from "portal-route-sdk-demo";
 
@@ -28,3 +33,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
+```

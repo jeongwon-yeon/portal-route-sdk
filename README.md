@@ -22,6 +22,8 @@ export default function App() {
 
 `AppRoutes`는 서비스의 기존 라우트입니다. `parentOrigin`에는 포털의 스킴, 호스트, 포트를 지정합니다. iframe 밖에서 서비스를 직접 열면 라우터가 독립적으로 동작합니다.
 
+전체 예제는 [포털 앱](examples/host-App.md)과 [서비스 앱](examples/child-App.md)에서 확인할 수 있습니다. 코드 블록을 기존 앱의 `App.tsx`에 복사해 사용합니다.
+
 포털에서는 현재 서비스의 iframe과 함께 `PortalHostSync`를 배치하고 `iframeRef`, `serviceOrigin`, `basePath`를 전달합니다. 서비스가 교체되면 프레임과 동기화 컴포넌트를 함께 다시 마운트합니다. Vite에서 로컬 SDK를 심볼릭 링크로 참조하는 경우 React와 React Router를 `resolve.dedupe`에 지정하고 SDK 경로를 `server.fs.allow`에 추가합니다.
 
 서비스 내부의 일반 링크 이동은 대상 문서에도 SDK가 로드될 때 동기화됩니다. 배포 서버는 서비스 내부 경로에 SPA 진입점을 반환해야 하며 SDK의 문서 식별에는 로컬호스트 또는 HTTPS가 필요합니다.
